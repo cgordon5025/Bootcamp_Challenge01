@@ -16,4 +16,4 @@ N/A
 N/A
 
 ## Link to Application
-cgordon5025.github.io/CSS-and-HTML-Rebacking
+[Link to Application](https://www.cgordon5025.github.io/CSS-and-HTML-Rebacking)
