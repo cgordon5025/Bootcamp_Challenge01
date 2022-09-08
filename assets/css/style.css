@@ -1,0 +1,173 @@
+/*In this sheet we are following a flow, that reflects the flow of the HTML file*/
+/*this is applying a general layout to the entire page, establishing that there is no padding or margins, and that the box sizing is a border box
+a border box includes the margin/padding/border in the size ratio of the element*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*This establishes that in the body of the page (visible portion) that the background will be a specific color
+this cannot go in the '*' section since it will give everything that color including text elements*/
+body {
+    background-color: #d9dcd6;
+}
+
+/*This is establishing the formatting, font and color for the header section*/
+header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #2a607c;
+    color: #ffffff;
+}
+
+/*We need to specify that text of the logo is in-line, removing this line of code messes with this nav bar
+also establishes the font size of the logo*/
+header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+/*Since the logo is multicolored we must further specify that the SEO of the company name must be a different color*/
+header h1 .seo {
+    color: #d9cdc6;
+}
+
+/*Here we are formatting the nav section of the header section. We want it to be to the right of the page, have padding and margins and be a smaller font size than the logo*/
+header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+/*All hyperlinks will be in a white font and have no special styling*/
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*All information in a paragraph element will be 16 pixels*/
+p {
+    font-size: 16px;
+}
+
+/*The background image is 800 px tall and will adapt to the width of the window.*/
+.background {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/digital-marketing-meeting.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/*The following two classes are for where the images in the article sections are located, will they be to the right or left of the elements*/
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
+/*This class is the formatting of the content section, which are given the <article> label
+We have here that we want there to be a width of 75% of the page, and begin 20px from the left of the page
+
+Reason we split it different from how the benefits section is is because we want the entire section that contains the articles on the content
+to have a width of 75%, line block display and a left margin*/
+
+.content-format {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/*The next three parts establish the blocks of the content section, 
+the first states the spaces between the boxes, the size font size and font 
+the next applies to the images of the content section, which will be 200 px large
+the last is for the titles of each block will will be above the paragraphs and be a larger font size than typical h2 elements are*/
+.content {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+.content img {
+    max-height: 200px;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/*here is establish the format of the sidebar that will have the benefits information*/
+.benefits-format {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+}
+
+/*The next three parts establish the benefits section
+the first states that each section of benefits will have a margin of 32 px and be in a white font
+the second states that the images will be in a block display and that they will have a margin of 10px and automatically cventer themselves
+the last establishes that the titles of each block will have a margin above the paragraphs and will be centered within the element*/
+.benefits {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+.benefits img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+.benefits h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*This establishes the formatting for the footer, and what font it should be in
+the section below this one specifies that the font size of anything with the h2 attribute should be a different size from te default*/
+footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 20px;
+}
+
+/* Summary of what I did
+
+To start, to avoid any mistaken uploads and merges with the gitlab repo, I copied the 02-Challenge directory using the cp -r command, and put it in my new repo that i created
+I then did git add -A, git commit -m"quote" and git push origin main to ensure that things were working properly, 
+Lastly, I created a new branch called update/accessibility so I can work with worrying about changing the 'master' site (pretending this is real and not an exercise)
+once that I was done I began to work on making the page accessible
+
+I also kept the duplicate in-case I changed something and wanted to go back and reference what it used to look like (other option is to look at the original in github)
+To make it Accessible
+-combined all the redundant lines of code
+    -i.e. each section was named differently, so the images can be different and go where they should, but the lines of code we identical, so I combined them to optimize the code
+-removed lines of code that pertained to the unordered list and list, since those were removed and replaced with the <nav> element
+reworked the code so the classes and attributes reflected the changes I made to the classes in the html
+
+grouped all attributes of similar classes (i.e. all the content are together and sequential, all the benefits are sequential. this avoids user or IT from scrolling and searching for relevant info
+
+note:
+    I thought I could remove the font sizes for all of the header, but upon closer inspection these sizes were custom and not the default

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Horiseon-Marketing-Agency-Home</title>
+</head>
+
+<body>
+    <header>
+        <h1>Hori<span class="seo">seo</span>n</h1>
+        <nav>
+            <!-- in this section we are establishing the navigation bar at the top, each link goes to a section of the page-->
+            <a href="#search-engine-optimization">Search Engine Optimization</a>
+            <a href="#online-reputation-management">Online Reputation Management</a>
+            <a href="#social-media-marketing">Social Media Marketing</a>
+        </nav>
+    </header>
+
+    <section class="background" aria-label="group of 4 people, 3 men 1 women, around a conference room table"></section>
+    <section class="content-format">
+        <section class="content" id="search-engine-optimization">
+            <!-- this article is comprised of an image of SEO, and a short paragraph-->
+            <figure>
+                <img src="./assets/images/search-engine-optimization.jpg" class="float-left"
+                    alt="image of notebook detailing search engine ooptimization" />
+            </figure>
+            <h2>Search Engine Optimization</h2>
+            <p>
+                The dominance of mobile internet use means that users are searching for the right business as they
+                travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase
+                your visibility and find the right customers for your business.
+            </p>
+        </section>
+        <section class="content" id="online-reputation-management">
+            <!-- this article is comprised of an image of Online Reputation Management and a short paragraph -->
+            <figure>
+                <img src="./assets/images/online-reputation-management.jpg" class="float-right"
+                    alt="image of a laptop with a reputation graph on it, there is a bar graph with a projection line going to the upper right, and two pie graphs, the details of the pie graphs are not included" />
+            </figure>
+            <h2>Online Reputation Management</h2>
+            <p>
+                The web is full of opinions, and some of these can be negative. Social media allows anyone with an
+                internet connection to say whatever they want about your business. Online Reputation Management gives
+                you the control over what potential customers see when they search for your business.
+            </p>
+        </section>
+        <section class="content" id="social-media-marketing">
+            <!-- this article is comprised of an image of social media marketing and a short paragraph-->
+
+            <figure>
+                <img src="./assets/images/social-media-marketing.jpg" class="float-left"
+                    alt="image of a desk with speech bubbles saying media, like, tweet, share, and various social media logos and icons" />
+            </figure>
+            <h2>Social Media Marketing</h2>
+            <p>
+                Social media continues to have a sizable influence on buying habits. Social media marketing helps you
+                determine which platforms are suited to your brand, using analytics to find the right markets and
+                increase your lead generation.
+            </p>
+        </section>
+    </section>
+    <aside class="benefits-format">
+        <!-- this established the formatting of the side bar that details different benefits from employing different strategies-->
+        <section class="benefits">
+            <h3>Lead Generation</h3>
+            <!-- this portion of the sidebar is comprised of an icon representing Lead Generation and a sentence about the benefits-->
+            <figure>
+                <img src="./assets/images/lead-generation.png"
+                    alt="image of a half sun, with a triangle with an arrow pointing down inside it, at the bottom is a circle with a dollar sign in it" />
+            </figure>
+            <p>
+                Inbound strategies for lead generation require less work for your business, bringing customers directly
+                to your website.
+            </p>
+        </section>
+        <section class="benefits">
+            <h3>Brand Awareness</h3>
+            <!-- this portion of the side bar is comprised of an icon representing brand awareness and a sentence about the benefits-->
+            <figure>
+                <img src="./assets/images/brand-awareness.png"
+                    alt="image of lightbulb sending out a signal, with a just a shirt and tie" />
+            </figure>
+            <p>
+                Users find your business through paid and organic searches, increasing the search ranking and visibility
+                for your business.
+            </p>
+        </section>
+        <section class="benefits">
+            <h3>Cost Management</h3>
+            <!--- this portion of the side bar is comprised of an icon representing cost management and a sentence on the benefits-->
+            <figure>
+                <img src="./assets/images/cost-management.png"
+                    alt="image of sing gear with three circles with dollars signs in them" />
+            </figure>
+            <p>
+                As the search ranking for your business increases, your advertising costs decrease, and you no longer
+                need to advertise your page.
+            </p>
+        </section>
+    </aside>
+    <footer>
+        <!-- this footer contains their copyright and gives credit to those who created the page (Horiseon)-->
+        <h2>Made with ❤️️ by Horiseon</h2>
+        <p>
+            &copy; 2019 Horiseon Social Solution Services, Inc.
+        </p>
+    </footer>
+</body>
+
+</html>
+<!-- Summary of what I changed to make this accessible
+
+I added alt text for all images and icons
+
+changed the unordered list section of links to the SEO, Online Rep Management and Social Media Marketing nav bar into a nav element
+
+removed the class "header" due to the redundancy of the code
+
+added <figure> around the images for html semantics, changed all <div> for the benefits section into <aside>, all <div> in the content section into <section> respectively
+
+renamed sections hero-> background as it was the general formatting and background of the page
+    content->content-format as it was formatting the blocks of content but had nothing to do with the actual content itself, could be misleading
+    Search Engine Optimization, Online Reputation Management, and Social Media Marketing -> content, as this was the actual content that we have in the section
+        did the same to the benefits section
+Added back the id's so that the nav bar could be functional, names remained the same as well
+
+-->
