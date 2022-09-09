@@ -8,7 +8,7 @@ N/A
 
 ## Usage
 Due to the page missing a JavaScript, it mostly cosmetic, the navigation bar at the top does function.
-![mock up of the application] (./assets/css/mock-up.png)
+![mock up of the application](./assets/images/mock-up.png)
 ## Credits
 N/A
 
