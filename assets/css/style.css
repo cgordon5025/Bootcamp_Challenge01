@@ -46,6 +46,7 @@ header nav {
 a {
     color: #ffffff;
     text-decoration: none;
+    padding:10px;
 }
 
 /*All information in a paragraph element will be 16 pixels*/
